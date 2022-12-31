@@ -40,34 +40,34 @@ function Certifications() {
             id: 6,
             title: "IBM Blockchain Essantials",
             imageUrl:
-                "/assets/images/certificationLogos/Blockchain+Essentials.png",
+                "/assets/images/certificationLogos/BlockchainEssentials.png",
             url: "",
         },
         {
             id: 7,
             title: "IBM Bluemix Essentials",
             imageUrl:
-                "/assets/images/certificationLogos/Bluemix+Essentials+-+Knowledge+Badge.png",
+                "/assets/images/certificationLogos/BluemixEssentialsKnowledgeBadge.png",
             url: "",
         },
         {
             id: 8,
             title: "IBM Cloud Container Service",
             imageUrl:
-                "/assets/images/certificationLogos/Cloud+Container+Service+_26+KBs.png",
+                "/assets/images/certificationLogos/CloudContainerService.png",
             url: "",
         },
         {
             id: 9,
             title: "IBM Docker Essentials",
-            imageUrl: "/assets/images/certificationLogos/Docker+Essentials.png",
+            imageUrl: "/assets/images/certificationLogos/DockerEssentials.png",
             url: "",
         },
         {
             id: 10,
             title: "IBM Node Red",
             imageUrl:
-                "/assets/images/certificationLogos/Node+RED+-+Knowledge+Badge.png",
+                "/assets/images/certificationLogos/NodeREDKnowledgeBadge.png",
             url: "",
         },
         {
@@ -87,7 +87,7 @@ function Certifications() {
             id: 13,
             title: "Microsoft HTML5 with JS & CSS3",
             imageUrl:
-                "/assets/images/certificationLogos/Programming+in+HTML5+with+JavaScript+and+Css3-01.png",
+                "/assets/images/certificationLogos/ProgramminginHTML5withJavaScriptandCss3.png",
             url: "",
         },
         {
