@@ -19,13 +19,13 @@ function Demos() {
             id: 3,
             title: "React - Github finder",
             imageUrl: "",
-            url: "",
+            url: "https://main.d12zj21caftg94.amplifyapp.com/",
         },
         {
             id: 4,
             title: "React - Feedback App",
             imageUrl: "",
-            url: "",
+            url: "https://main.d3p9pckfb94gq8.amplifyapp.com/",
         },
         {
             id: 3,
