@@ -28,13 +28,13 @@ function Demos() {
             url: "https://main.d3p9pckfb94gq8.amplifyapp.com/",
         },
         {
-            id: 3,
+            id: 5,
             title: "React - YOLO Stock sentiments",
             imageUrl: "",
             url: "https://master.d10feblik8amou.amplifyapp.com/",
         },
         {
-            id: 4,
+            id: 6,
             title: "VueJS - ToDo App",
             imageUrl: "",
             url: "https://main.d9f81ain3jz5c.amplifyapp.com/",
