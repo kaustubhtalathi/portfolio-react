@@ -1,8 +1,7 @@
 import Title from "../components/Title";
 
 import { useState } from "react";
-import { Document, Page } from "react-pdf/dist/esm/entry.webpack";
-import resumePDF from "../assets/pdf/resume.pdf";
+import { Document, Page } from "react-pdf";
 
 function Resume() {
     const [numPages, setNumPages] = useState(null);
@@ -16,15 +15,18 @@ function Resume() {
         <>
             <Title titleText={"Resume"} />
 
-            <Document
-                file={resumePDF}
-                options={{ workerSrc: "/assets/pdf/pdf.worker.js" }}
-                onLoadSuccess={onDocumentLoadSuccess}
-            >
-                {Array.from(new Array(numPages), (el, index) => (
-                    <Page key={`page_${index + 1}`} pageNumber={index + 1} />
-                ))}
-            </Document>
+            <div className="flex justify-center">
+                <iframe
+                    width="500"
+                    height="1000"
+                    title="resume"
+                    src="/assets/pdf/resume.pdf"
+                    style={{
+                        WebkitTransform: "scale(1.5)",
+                        marginTop: "400px",
+                    }}
+                ></iframe>
+            </div>
         </>
     );
 }
