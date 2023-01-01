@@ -18,7 +18,7 @@ function Resume() {
 
             <Document
                 file={resumePDF}
-                options={{ workerSrc: "/pdf.worker.js" }}
+                options={{ workerSrc: "/assets/pdf/pdf.worker.js" }}
                 onLoadSuccess={onDocumentLoadSuccess}
             >
                 {Array.from(new Array(numPages), (el, index) => (
