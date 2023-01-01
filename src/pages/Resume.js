@@ -6,15 +6,19 @@ function Resume() {
             <Title titleText={"Resume"} />
             <div className="h-screen">
                 <object
-                    data="/assets/pdf/Kaustubh Talathi - 2022 Resume.pdf"
+                    data="/assets/pdf/resume.pdf"
                     type="application/pdf"
                     width="100%"
                     className="h-full"
                 >
                     <p>
-                        Alternative text - include a link{" "}
-                        <a href="http://africau.edu/images/default/sample.pdf">
-                            to the PDF!
+                        Cannot load resume: Please visit{" "}
+                        <a
+                            href="https://www.linkedin.com/in/kaustubh-talathi-5a3a088/"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            linkedin profile:
                         </a>
                     </p>
                 </object>
