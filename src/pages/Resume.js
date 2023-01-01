@@ -1,11 +1,11 @@
 import Title from "../components/Title";
 
 import { useState } from "react";
-import { Document, Page } from "react-pdf";
+// import { Document, Page } from "react-pdf";
+import { Document, Page } from "react-pdf/dist/cjs/entry.webpack";
 
 function Resume() {
     const [numPages, setNumPages] = useState(null);
-    const [pageNumber, setPageNumber] = useState(1);
 
     function onDocumentLoadSuccess({ numPages }) {
         setNumPages(numPages);
@@ -15,7 +15,17 @@ function Resume() {
         <>
             <Title titleText={"Resume"} />
 
-            <div className="flex justify-center">
+            <Document
+                file="/assets/pdf/resume.pdf"
+                options={{ workerSrc: "/pdf.worker.js" }}
+                onLoadSuccess={onDocumentLoadSuccess}
+            >
+                {Array.from(new Array(numPages), (el, index) => (
+                    <Page key={`page_${index + 1}`} pageNumber={index + 1} />
+                ))}
+            </Document>
+
+            {/* <div className="flex justify-center">
                 <iframe
                     width="500"
                     height="1000"
@@ -26,7 +36,7 @@ function Resume() {
                         marginTop: "400px",
                     }}
                 ></iframe>
-            </div>
+            </div> */}
         </>
     );
 }
