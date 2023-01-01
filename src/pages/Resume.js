@@ -6,9 +6,28 @@ import { Document, Page } from "react-pdf/dist/cjs/entry.webpack";
 
 function Resume() {
     const [numPages, setNumPages] = useState(null);
+    const [isError, setIsError] = useState(false);
 
     function onDocumentLoadSuccess({ numPages }) {
+        setIsError(false);
         setNumPages(numPages);
+    }
+
+    function onDocumentLoadError() {
+        setIsError(true);
+    }
+
+    if (isError) {
+        return (
+            <>
+                <Title titleText={"Resume"} />
+
+                <p className="text-center">
+                    There was an error to load the document. Please contact me
+                    on Linkedin.
+                </p>
+            </>
+        );
     }
 
     return (
@@ -19,6 +38,8 @@ function Resume() {
                 file="/assets/pdf/resume.pdf"
                 options={{ workerSrc: "/pdf.worker.js" }}
                 onLoadSuccess={onDocumentLoadSuccess}
+                onLoadError={onDocumentLoadError}
+                onDocumentLoadErrorr={onDocumentLoadError}
             >
                 {Array.from(new Array(numPages), (el, index) => (
                     <Page key={`page_${index + 1}`} pageNumber={index + 1} />
